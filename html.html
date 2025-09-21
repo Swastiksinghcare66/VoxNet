@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Voice Chat</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #0ff;
+    }
+
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #chatContainer {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    #messages {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+      height: 300px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+
+    .user {
+      background: #0ff;
+      color: #000;
+      align-self: flex-end;
+    }
+
+    .bot {
+      background: #222;
+      color: #0ff;
+      align-self: flex-start;
+    }
+
+    #inputContainer {
+      display: flex;
+      gap: 5px;
+    }
+
+    #userInput {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    #sendBtn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      background: #0ff;
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <div id="chatContainer">
+    <div id="messages"></div>
+    <div id="inputContainer">
+      <input id="userInput" type="text" placeholder="Type your message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

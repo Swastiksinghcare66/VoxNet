@@ -1,0 +1,126 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Particles */
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Main Container */
+.ai-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* AI Core Orb */
+.ai-core {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00f5ff, #001f3f);
+  box-shadow: 0 0 30px #00f5ff, 0 0 60px #00f5ff, 0 0 100px #00f5ff;
+  animation: pulse 3s infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); opacity: 0.9; }
+  to { transform: scale(1.1); opacity: 1; }
+}
+
+/* Chat Window */
+.chat-window {
+  width: 350px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Messages */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.message {
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 12px;
+  max-width: 80%;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.message.bot {
+  background: rgba(0, 255, 255, 0.2);
+  align-self: flex-start;
+  border-left: 3px solid #00f5ff;
+}
+
+.message.user {
+  background: rgba(255, 255, 255, 0.15);
+  align-self: flex-end;
+  border-right: 3px solid #ff00ff;
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 14px;
+}
+
+.input-area button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #00f5ff, #ff00ff);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-area button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00f5ff, 0 0 25px #ff00ff;
+}
